@@ -1,0 +1,13 @@
+[Unit]
+Description=Balaena Quant — Control Panel (Mission Control + KB Explorer)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/anson/balaena-quant/mission_control.py
+Restart=on-failure
+RestartSec=10
+MemoryMax=1G
+
+[Install]
+WantedBy=default.target
